@@ -1,0 +1,14 @@
+.characters{
+   float: left;
+   padding: 40px;
+}
+
+.vehicles{
+   padding: 40px;
+    margin: auto;
+}
+
+.planets{
+  
+    padding: 40px;
+}
