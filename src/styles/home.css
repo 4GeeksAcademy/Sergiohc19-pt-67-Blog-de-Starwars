@@ -4,13 +4,12 @@ body{
     background-image: url(https://e0.pxfuel.com/wallpapers/804/170/desktop-wallpaper-star-wars-star-background-best-background-star-wars-universe.jpg);
 }
 
-
-
 .logo{
     width: 900px;
     height: 200px;
     image-rendering: auto;
     object-fit: cover;
+    background-color: black
 }
 
 h1{
@@ -52,4 +51,14 @@ iframe{
 
 .carousel{
     width: 400px;
+}
+
+.carousel-item {
+    width: 400px;
+    height: 400px;
+}
+
+
+nav{
+    background-color: black;
 }

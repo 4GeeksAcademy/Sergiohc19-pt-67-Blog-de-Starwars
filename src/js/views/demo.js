@@ -9,7 +9,7 @@ export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	useEffect(() => {
-		
+		actions.getInfo()
 	}, []);
 
 	return (
