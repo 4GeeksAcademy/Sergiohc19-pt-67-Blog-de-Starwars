@@ -8,9 +8,18 @@ import "../../styles/demo.css";
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
+	useEffect(() => {
+		
+	}, []);
+
 	return (
 		<div className="container">
 		
+
+
+
+
+
 		</div>
 	);
 };

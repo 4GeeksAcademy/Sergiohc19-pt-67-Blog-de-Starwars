@@ -1,14 +1,55 @@
+body{
+    background-color: black;
+    color: #FFEB1F;
+    background-image: url(https://e0.pxfuel.com/wallpapers/804/170/desktop-wallpaper-star-wars-star-background-best-background-star-wars-universe.jpg);
+}
+
+
+
+.logo{
+    width: 900px;
+    height: 200px;
+    image-rendering: auto;
+    object-fit: cover;
+}
+
+h1{
+font-size: 120px;
+font-weight: bold;
+color: #FFEB1F;
+font-style:inherit;
+font-family: jedi-outline;
+
+}
+
+.btn-info{
+    font-size: 30px;
+    text-decoration: none;
+    color: #FFEB1F;
+   
+}
+
+iframe{
+    margin-inline: 20px;
+}
+
+
+
 .characters{
    float: left;
-   padding: 40px;
+   padding: 10px;
 }
 
 .vehicles{
-   padding: 40px;
+   padding: 10px;
     margin: auto;
 }
 
 .planets{
   
-    padding: 40px;
+    padding: 10px;
+}
+
+.carousel{
+    width: 400px;
 }
