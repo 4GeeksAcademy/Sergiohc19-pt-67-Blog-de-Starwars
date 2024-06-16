@@ -75,7 +75,8 @@ export const Home = () => {
                                     />
                                     <div className="carousel-caption d-none d-md-block">
                                         <Link to={`/charactersInfo${item.uid}`} className="btn-info">
-                                            {item.name}
+                                            {item.name} 
+                                            {item.height}
                                         </Link>
                                     </div>
                                 </div>
