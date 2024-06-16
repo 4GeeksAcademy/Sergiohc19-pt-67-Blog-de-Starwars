@@ -1,7 +1,9 @@
+// src/pages/Home.js
 import "../../styles/home.css";
-import React, { useState, useEffect, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import {CharactersInfo} from "../views/charactersInfo.js";
 
 export const Home = () => {
     const { store, actions } = useContext(Context);
@@ -9,15 +11,13 @@ export const Home = () => {
     useEffect(() => {
         actions.getCharacters();
         actions.getVehicles();
-        actions.getPlanets();
+        actions.getPlanets()
     }, []);
 
     return (
-        <div className="text-center mt-5">
-            <h1>
-                <img className="logo" src="https://i.pinimg.com/564x/7b/f3/c3/7bf3c350b349551186ffb091a17e9645.jpg" alt="Star Wars Logo" />
-            </h1>
-            <div className="d-flex mx-5 p-2">
+        <div className="text-center">
+          
+            <div className="d-flex mx-5 px-2 mt-0">
                 <iframe
                     width="560"
                     height="340"
@@ -52,13 +52,13 @@ export const Home = () => {
             <div className="d-flex">
                 <div className="characters">
                     <h2>Characters</h2>
-                    <div id="carouselExampleCaptions" className="carousel slide">
+                    <div id="carouselCharacters" className="carousel slide">
                         <div className="carousel-indicators">
                             {store.characters.map((item, index) => (
                                 <button
                                     key={index}
                                     type="button"
-                                    data-bs-target="#carouselExampleCaptions"
+                                    data-bs-target="#carouselCharacters"
                                     data-bs-slide-to={index}
                                     className={index === 0 ? "active" : ""}
                                     aria-label={`Slide ${index + 1}`}
@@ -71,10 +71,10 @@ export const Home = () => {
                                     <img
                                         src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
                                         className="d-block w-100"
-                                        alt={item.name}
+                                        alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/demo${item.uid}`} className="btn-info">
+                                        <Link to={`/charactersInfo${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
                                     </div>
@@ -84,7 +84,7 @@ export const Home = () => {
                         <button
                             className="carousel-control-prev"
                             type="button"
-                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-target="#carouselCharacters"
                             data-bs-slide="prev"
                         >
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -93,7 +93,7 @@ export const Home = () => {
                         <button
                             className="carousel-control-next"
                             type="button"
-                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-target="#carouselCharacters"
                             data-bs-slide="next"
                         >
                             <span className="carousel-control-next-icon" aria-hidden="true"></span>
@@ -101,6 +101,16 @@ export const Home = () => {
                         </button>
                     </div>
                 </div>
+
+            
+
+
+
+
+
+
+
+
             </div>
         </div>
     );

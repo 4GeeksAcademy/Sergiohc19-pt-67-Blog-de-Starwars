@@ -25,11 +25,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ planets: data.results })
 			},
 
-			getInfo : async () => {
-				const res = fetch(`https://www.swapi.tech/api/people/id`)
+			getCharactersInfo : async () => {
+				const res = fetch("https://www.swapi.tech/api/people/:id/")
 				const data = await res.json()
 				console.log(data)
-				setStore({ info: data.results })
+				// setStore({ info: data.results })
 				
 			}
 
