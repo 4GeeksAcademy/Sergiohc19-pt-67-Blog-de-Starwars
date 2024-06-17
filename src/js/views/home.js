@@ -3,24 +3,24 @@ import "../../styles/home.css";
 import React, { useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import {CharactersInfo} from "../views/charactersInfo.js";
+import { CharactersInfo } from "../views/charactersInfo.js";
 
 export const Home = () => {
     const { store, actions } = useContext(Context);
-   
+
 
     useEffect(() => {
         actions.getCharacters();
         actions.getVehicles();
-        actions.getPlanets()
-     
+        actions.getPlanets();
     }, []);
 
     return (
         <div className="text-center">
-          
+
             <div className="d-flex mx-5 px-2 mt-0">
                 <iframe
+                    className=" mt-3  border border-1  rounded-start  border border-warning-subtle"
                     width="560"
                     height="340"
                     src="https://www.youtube.com/embed/xr3hPFJAHO4?si=Javg3k_2jBqfeE99"
@@ -31,6 +31,7 @@ export const Home = () => {
                     allowFullScreen
                 ></iframe>
                 <iframe
+                    className=" mt-3 border border-1  rounded-start  border border-warning-subtle"
                     width="560"
                     height="340"
                     src="https://www.youtube.com/embed/beAH5vea99k?si=n-_t3UeKtXv5jbs6"
@@ -41,6 +42,7 @@ export const Home = () => {
                     allowFullScreen
                 ></iframe>
                 <iframe
+                    className="mt-3 border border-1  rounded-start  border border-warning-subtle"
                     width="560"
                     height="340"
                     src="https://www.youtube.com/embed/yhuKapE-Bio?si=YjbTsvm1qaY0Y4SS"
@@ -54,7 +56,7 @@ export const Home = () => {
             <div className="d-flex">
                 <div className="characters">
                     <h2>Characters</h2>
-                    <div id="carouselCharacters" className="carousel slide">
+                    <div id="carouselCharacters" className="carousel slide rounded-start">
                         <div className="carousel-indicators">
                             {store.characters.map((item, index) => (
                                 <button
@@ -76,9 +78,10 @@ export const Home = () => {
                                         alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/charactersInfo${item.uid}`} className="btn-info">
-                                            {item.name} 
+                                        <Link to={`/charactersInfo/${item.uid}`} className="btn-info">
+                                            {item.name}
                                         </Link>
+                                        <button onClick={() => actions.addFavorits(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -104,7 +107,7 @@ export const Home = () => {
                     </div>
                 </div>
 
-            
+
 
 
 

@@ -31,6 +31,12 @@ iframe {
 
 .carousel {
     width: 400px;
+
+}
+
+.characters {
+    margin-left: 9rem;
+    padding-block: 30px;
 }
 
 .carousel-item {
@@ -40,4 +46,11 @@ iframe {
 
 nav {
     background-color: black;
+}
+
+.like {
+    font-weight: bold;
+    border-radius: 20px;
+    margin-left: 10px;
+    background-color: transparent;
 }

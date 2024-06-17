@@ -7,8 +7,9 @@ export const CharactersInfo = props => {
     const params = useParams();
 
     useEffect(() => {
+
         actions.getCharactersInfo(params.uid)
-        actions.getPhoto(params.uid)
+
     }, [])
 
     return (
@@ -16,62 +17,86 @@ export const CharactersInfo = props => {
         <div className="jumbotron mx-5 my-5">
 
 
-            <div className="card mb-3 border border-1  rounded-start  border border-warning-subtle" style={{ width: "650px", height: "525px", background: "black", color: "#FFEB1F" }}>
+            <div className="card mb-3 border border-1  rounded-start  border border-warning-subtle" style={{ width: "1260px", height: "555px", background: "black", color: "#FFEB1F" }}>
 
-                <div className="d-flex">
-                    <div className="col-md-7">
+                <div className="d-flex ">
+                    <div className="col-md-4">
                         <img src="https://starwars-visualguide.com/assets/img/characters/1.jpg" className="img-fluid rounded-start object-fit-cover" alt="..." />
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title">CharactersInfo</h5>
 
-                            <ul>
-                                <li><h1>
-                                    {store?.info?.birth_year}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.eye_color}</h1>
-                                </li><h1>
-                                    {store?.info?.films}</h1>
-                                <li><h1>
-                                    {store?.info?.gender}</h1>
-                                </li>  <h1>
-                                    {store?.info?.hair_color}</h1>
-                                <li><h1>
-                                    {store?.info?.height}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.homeworld}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.mass}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.name}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.skin_color}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.created}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.edited}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.species}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.starships}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.url}</h1>
-                                </li>
-                                <li><h1>
-                                    {store?.info?.vehicles}</h1>
-                                </li>
-                            </ul>
+                            <div className="d-flex">
+                                <ul>
+
+                                    <li className="p-3" ><h6>"Birth_year":
+                                        {store?.infocharacters?.birth_year}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>"Eye_color":
+                                        {store?.infocharacters?.eye_color}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>"Films":
+                                        {store?.infocharacters?.films}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6> "Gender":
+                                        {store?.infocharacters?.gender}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6> "Hair_color":
+                                        {store?.infocharacters?.hair_color}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>"Height":
+                                        {store?.infocharacters?.height}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>"Homeworld":
+                                        {store?.infocharacters?.homeworld}</h6>
+                                    </li>
+
+                                    <li className="p-2"><h6> "Mass":
+                                        {store?.infocharacters?.mass}</h6>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li className="p-3"><h6> "Name":
+                                        {store?.infocharacters?.name}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>  "Skin_color":
+                                        {store?.infocharacters?.skin_color}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6> "Created":
+                                        {store?.infocharacters?.created}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>  "Edited":
+                                        {store?.infocharacters?.edited}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6> "Species":
+                                        {store?.infocharacters?.species}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>"Starships":
+                                        {store?.infocharacters?.starships}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>"Url"
+                                        {store?.infocharacters?.url}</h6>
+                                    </li>
+
+                                    <li className="p-3"><h6>"Vehicles":
+                                        {store?.infocharacters?.vehicles}</h6>
+                                    </li>
+
+
+                                </ul>
+                            </div>/
                         </div>
                     </div>
                 </div>
