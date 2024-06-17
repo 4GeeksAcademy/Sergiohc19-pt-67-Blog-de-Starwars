@@ -2,44 +2,46 @@
     General Styles
 */
 
-.navbar{
+.navbar {
     background-color: black;
     margin-block: 0;
-    
+
 }
 
-.navbar-brand{
-    color:#FFEB1F
+.navbar-brand {
+    color: #FFEB1F
 }
 
-.navbar-brand:hover{
+.navbar-brand:hover {
     color: #FFEB1F;
 }
 
-.container-logo{
-    display:flex;
-    margin-inline: auto;
-    align-items: center;
+
+
+.container-nav {
+    display: flex;
 }
 
-.logo{    
+.container-logo {
+    margin-block: auto;
+    margin-inline: 35rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 300px;
     height: 200px;
     image-rendering: auto;
     object-fit: cover;
     font-weight: bold;
     color: #FFEB1F;
-    font-style:inherit;
-    
+    font-style: inherit;
 }
 
-
-.fa-brands{
-    font-size: 200px;
+.social-media {
+    margin-block: 15px;
+    padding-inline: 10px;
 }
 
-.social-media{
-    display: flex;
-    padding: 20px;
-    margin-inline:10px;
-}

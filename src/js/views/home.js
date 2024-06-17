@@ -1,17 +1,19 @@
 // src/pages/Home.js
 import "../../styles/home.css";
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import {CharactersInfo} from "../views/charactersInfo.js";
 
 export const Home = () => {
     const { store, actions } = useContext(Context);
+   
 
     useEffect(() => {
         actions.getCharacters();
         actions.getVehicles();
         actions.getPlanets()
+     
     }, []);
 
     return (
@@ -76,7 +78,6 @@ export const Home = () => {
                                     <div className="carousel-caption d-none d-md-block">
                                         <Link to={`/charactersInfo${item.uid}`} className="btn-info">
                                             {item.name} 
-                                            {item.height}
                                         </Link>
                                     </div>
                                 </div>
