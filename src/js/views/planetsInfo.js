@@ -2,14 +2,14 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const CharactersInfo = props => {
+export const PlanetsInfo = props => {
 
     const { store, actions } = useContext(Context);
     const params = useParams();
 
     useEffect(() => {
 
-        actions.getCharactersInfo(params.uid)
+        actions.getPlanetsInfo(params.uid)
 
     }, [])
 
@@ -22,7 +22,7 @@ export const CharactersInfo = props => {
 
                 <div className="d-flex ">
                     <div className="col-md-4">
-                        <img src="https://starwars-visualguide.com/assets/img/characters/1.jpg" className="img-fluid rounded-start object-fit-cover" alt="..." />
+                        <img src="https://starwars-visualguide.com/assets/img/vehicles/18.jpg" className="img-fluid rounded-start object-fit-cover" alt="..." />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -30,71 +30,62 @@ export const CharactersInfo = props => {
                             <div className="d-flex">
                                 <ul>
 
-                                    <li className="p-3" ><h6>"Birth_year":
-                                        {store?.infocharacters?.birth_year}</h6>
+                                    <li className="p-3" ><h6>"Cargo_capacity":
+                                        {store?.infoplanets?.climate}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Eye_color":
-                                        {store?.infocharacters?.eye_color}</h6>
+                                        {store?.infoplanets?.created}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Films":
-                                        {store?.infocharacters?.films}</h6>
+                                        {store?.infoplanets?.diameter}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Gender":
-                                        {store?.infocharacters?.gender}</h6>
+                                        {store?.infoplanets?.edited}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Hair_color":
-                                        {store?.infocharacters?.hair_color}</h6>
+                                        {store?.infoplanets?.films}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Height":
-                                        {store?.infocharacters?.height}</h6>
+                                        {store?.infoplanets?.gravity}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Homeworld":
-                                        {store?.infocharacters?.homeworld}</h6>
+                                        {store?.infoplanets?.name}</h6>
                                     </li>
 
                                     <li className="p-2"><h6> "Mass":
-                                        {store?.infocharacters?.mass}</h6>
+                                        {store?.infoplanets?.orbital_period}</h6>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li className="p-3"><h6> "Name":
-                                        {store?.infocharacters?.name}</h6>
+                                        {store?.infoplanets?.population}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>  "Skin_color":
-                                        {store?.infocharacters?.skin_color}</h6>
+                                        {store?.infoplanets?.residents}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Created":
-                                        {store?.infocharacters?.created}</h6>
+                                        {store?.infoplanets?.rotation_period}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>  "Edited":
-                                        {store?.infocharacters?.edited}</h6>
+                                        {store?.infoplanets?.surface_water}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Species":
-                                        {store?.infocharacters?.species}</h6>
+                                        {store?.infoplanets?.terrain}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Starships":
-                                        {store?.infocharacters?.starships}</h6>
+                                        {store?.infoplanets?.url}</h6>
                                     </li>
-
-                                    <li className="p-3"><h6>"Url"
-                                        {store?.infocharacters?.url}</h6>
-                                    </li>
-
-                                    <li className="p-3"><h6>"Vehicles":
-                                        {store?.infocharacters?.vehicles}</h6>
-                                    </li>
-
 
                                 </ul>
                             </div>/

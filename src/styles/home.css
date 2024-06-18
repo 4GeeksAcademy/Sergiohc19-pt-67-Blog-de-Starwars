@@ -1,38 +1,62 @@
 body {
     background-color: black;
-    color: #FFEB1F;
+
     background-image: url(https://e0.pxfuel.com/wallpapers/804/170/desktop-wallpaper-star-wars-star-background-best-background-star-wars-universe.jpg);
 }
+
+h2 {
+    font-size: 50px;
+    font-weight: bolder;
+    transition: .3s linear;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 196, 0);
+    background-image: linear-gradient(to left, rgb(255, 196, 0), rgb(179, 139, 8), black, rgb(35, 31, 31));
+    -webkit-background-clip: text;
+    animation: move 25s linear infinite;
+
+}
+
+@keyframes move {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+
+h1:hover {
+    color: red;
+    text-shadow: 0 0 10 rgba(red, green, blue, alpha) 0 0 20 rgba(255, 0, 0, .5) 0 0 40 rgba(255, 0, 0, .5) 0 0 80 rgba(255, 0, 0, .5) 0 0 160 rgba(255, 0, 0, .5) 0 0 320 rgba(255, 0, 0, .5);
+}
+
 
 .btn-info {
     font-size: 30px;
     text-decoration: none;
-    color: #FFEB1F;
+    font-weight: bolder;
+    filter: brightness(300%);
+    filter: contrast(300%);
+    color: rgb(179, 139, 8);
+
 }
 
 iframe {
     margin-inline: 20px;
 }
 
-.characters {
-    float: left;
-    padding: 10px;
+.carousel {
+    width: 400px;
 }
 
 .vehicles {
-    padding: 10px;
-    margin: auto;
+    margin-left: 13rem;
+    padding-block: 30px;
 }
 
 .planets {
-
-    padding: 10px;
+    margin-left: 12rem;
+    padding-block: 30px;
 }
 
-.carousel {
-    width: 400px;
-
-}
 
 .characters {
     margin-left: 9rem;

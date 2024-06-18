@@ -1,6 +1,20 @@
 /* 
     General Styles
 */
+body::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c9b505 0%, #000000 100%);
+    border-radius: 80px;
+}
+
+
+
+
 
 .navbar {
     background-color: black;
@@ -43,10 +57,30 @@
 .social-media {
     margin-block: 15px;
     padding-inline: 10px;
+
 }
 
-.dropdown{
+.social-media a {
+    color: rgb(95, 91, 91);
+    background: none;
+    font-size: 13px;
+    transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    filter: brightness(300%);
+    filter: contrast(300%);
+    color: #FFEB1F;
+    ;
+    text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00c7ff, 0 0 70px #00c7ff, 0 0 80px #00c7ff, 0 0 100px #00c7ff, 0 0 150px #00c7ff;
+    /* Sombra del texto simulando el efecto de neón */
+    transform: scale(1.2);
+    /* Escala el icono al 120% en hover */
+}
+
+
+
+
+.dropdown {
     margin-block: 15px;
 }
-
-
