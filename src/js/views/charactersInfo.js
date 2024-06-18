@@ -10,6 +10,7 @@ export const CharactersInfo = props => {
     useEffect(() => {
 
         actions.getCharactersInfo(params.uid)
+       
 
     }, [])
 

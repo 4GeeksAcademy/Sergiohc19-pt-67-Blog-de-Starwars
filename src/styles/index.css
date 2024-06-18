@@ -1,6 +1,9 @@
 /* 
     General Styles
 */
+
+
+
 body::-webkit-scrollbar {
     width: 8px;
 
@@ -11,6 +14,16 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, #c9b505 0%, #000000 100%);
     border-radius: 80px;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -83,4 +96,18 @@ body::-webkit-scrollbar-thumb {
 
 .dropdown {
     margin-block: 15px;
+}
+
+
+
+.dropdown-menu {
+    width: 220px;
+}
+
+.delete {
+    border: none;
+    margin-inline: 50px;
+    padding: 0;
+    width: 0;
+    height: 0;
 }

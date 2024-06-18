@@ -76,5 +76,7 @@ nav {
     font-weight: bold;
     border-radius: 20px;
     margin-left: 10px;
-    background-color: transparent;
+    padding: 0;
+    width: 0;
+    height: 0;
 }

@@ -11,7 +11,8 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { CharactersInfo } from "./views/charactersInfo";
 import { VehiclesInfo } from "./views/vehiclesInfo";
-import { PlanetsInfo } from "./views/planetsInfo.js"
+import { PlanetsInfo } from "./views/planetsInfo"
+
 
 //create your first component
 const Layout = () => {

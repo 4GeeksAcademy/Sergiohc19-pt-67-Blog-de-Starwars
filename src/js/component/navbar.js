@@ -26,12 +26,22 @@ export const Navbar = () => {
 
 
 				<div class="dropdown">
+
 					<a className="btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Favorits
+						Favorits ({store.favorits.length})
 					</a>
 
 					<ul className="dropdown-menu bg-warning">
-						{store.favorits.map((item, index) => { return (<li><Link to={`/charactersInfo/${item.id}`} className="dropdown-item bg-warning fw-bold" >{item.name}</Link></li>) })}
+						{store.favorits.map((item, index) => {
+							return (<li key={index}>  <Link to={`/charactersInfo/${item.id}`} className="dropdown-item bg-warning fw-bold" >{item.name}</Link>
+								<button className="delete" onClick={() => actions.setDeletF(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+
+							</li>)
+
+
+						})}
+
+
 
 
 

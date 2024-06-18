@@ -6,10 +6,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets: [],
 			favorits: [],
 			infocharacters: {},
+			phothocharacters: {},
 			infovehicles: {},
 			infoplanets: {},
-
 		},
+
 		actions: {
 			getCharacters: async () => {
 				const res = await fetch("https://www.swapi.tech/api/people/")
@@ -36,6 +37,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					infocharacters: data.result.properties
 				})
+			},
+
+
+			phothoCharacters: async (uid) => {
+				const res = await fetch(`https://starwars-visualguide.com/assets/img/characters/${uid}.jpg`)
+				const data = await res.json()
+				console.log(data)
+				setStore({
+					phothocharacters: data
+				})
+
 
 			},
 
@@ -49,8 +61,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(data.result.properties)
 			},
 
-
-
 			getPlanetsInfo: async (uid) => {
 				const res = await fetch(`https://www.swapi.tech/api/planets/${uid}`)
 				const data = await res.json()
@@ -58,20 +68,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					infoplanets: data.result.properties
 				})
-
-
 			},
-
-
-
-
-
-
 
 			addFavorits: async (id, name) => {
 				const { favorits } = getStore()
 				setStore({ favorits: [...favorits, { id, name }] })
+			},
+
+
+			setDeletF: (name) => {
+				let store = getStore()
+				const result = store.favorits.filter((favorito) => (favorito != name));
+				setStore({ favorits: result })
 			}
+
+
+
 
 		}
 	};
