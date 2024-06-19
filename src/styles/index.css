@@ -1,112 +1,91 @@
-/* 
-    General Styles
-*/
-
-
-
+/* General Styles */
 body::-webkit-scrollbar {
     width: 8px;
-
 }
-
 
 body::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, #c9b505 0%, #000000 100%);
     border-radius: 80px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navbar {
-    background-color: black;
-    margin-block: 0;
-
-}
-
-.navbar-brand {
-    color: #FFEB1F
-}
-
-.navbar-brand:hover {
-    color: #FFEB1F;
-}
-
-
-
-.container-nav {
+    width: 100%;
+    height: 180px;
     display: flex;
+    justify-content: center;
+    /* Center the navbar content */
+    align-items: center;
+    /* Center elements vertically */
+    padding: 0;
+    position: relative;
+    /* Allows positioning children absolutely */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect total width */
 }
 
-.container-logo {
-    margin-block: auto;
-    margin-inline: 35rem;
+.Wars {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 330px;
+    height: 180px;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    padding-inline: 10px;
     image-rendering: auto;
     object-fit: cover;
     font-weight: bold;
-    color: #FFEB1F;
     font-style: inherit;
 }
 
 .social-media {
-    margin-block: 15px;
-    padding-inline: 10px;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    padding: 15px;
+    margin-bottom: 320px;
 }
 
 .social-media a {
     color: rgb(95, 91, 91);
     background: none;
-    font-size: 13px;
+    font-size: 11px;
     transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .social-media a:hover {
     filter: brightness(300%);
     filter: contrast(300%);
-    color: #FFEB1F;
-    ;
-    text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00c7ff, 0 0 70px #00c7ff, 0 0 80px #00c7ff, 0 0 100px #00c7ff, 0 0 150px #00c7ff;
-    /* Sombra del texto simulando el efecto de neón */
+    color: #FFCA2C;
     transform: scale(1.2);
     /* Escala el icono al 120% en hover */
 }
 
-
-
-
-.dropdown {
-    margin-block: 15px;
+.dropdown-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    /* Add spacing between dropdowns */
 }
 
-
-
 .dropdown-menu {
-    width: 220px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
 }
 
 .delete {
     border: none;
-    margin-inline: 50px;
+    margin-inline: 0px;
     padding: 0;
     width: 0;
     height: 0;

@@ -110,11 +110,6 @@ export const Home = () => {
                 </div>
 
 
-
-
-
-
-
                 <div className="vehicles">
                     <h2>Vehicles</h2>
                     <div id="carouselVehicles" className="carousel slide rounded-start">
@@ -169,12 +164,6 @@ export const Home = () => {
                 </div>
 
 
-
-
-
-
-
-
                 <div className="planets">
                     <h2>Planets</h2>
                     <div id="carouselPlanets" className="carousel slide rounded-start">
@@ -227,26 +216,6 @@ export const Home = () => {
                         </button>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             </div>
         </div>

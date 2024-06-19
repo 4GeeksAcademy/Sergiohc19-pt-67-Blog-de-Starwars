@@ -72,7 +72,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addFavorits: async (id, name) => {
 				const { favorits } = getStore()
-				setStore({ favorits: [...favorits, { id, name }] })
 			},
 
 
