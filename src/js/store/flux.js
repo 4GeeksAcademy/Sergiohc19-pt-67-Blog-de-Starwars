@@ -72,6 +72,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addFavorits: async (id, name) => {
 				const { favorits } = getStore()
+				setStore({ favorits: [...favorits, { id, name }] })
 			},
 
 
@@ -80,9 +81,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const result = store.favorits.filter((favorito) => (favorito != name));
 				setStore({ favorits: result })
 			}
-
-
-
 
 		}
 	};
