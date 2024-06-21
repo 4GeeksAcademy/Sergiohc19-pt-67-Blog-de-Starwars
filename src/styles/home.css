@@ -1,6 +1,5 @@
 body {
     background-color: black;
-
     background-image: url(https://e0.pxfuel.com/wallpapers/804/170/desktop-wallpaper-star-wars-star-background-best-background-star-wars-universe.jpg);
 }
 
@@ -12,8 +11,7 @@ h2 {
     -webkit-text-stroke: 2px rgb(255, 196, 0);
     background-image: linear-gradient(to left, rgb(255, 196, 0), rgb(179, 139, 8), black, rgb(35, 31, 31));
     -webkit-background-clip: text;
-    animation: move 25s linear infinite;
-
+    animation: move 30s linear infinite;
 }
 
 @keyframes move {

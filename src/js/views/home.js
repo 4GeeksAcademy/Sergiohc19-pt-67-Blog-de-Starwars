@@ -31,7 +31,7 @@ export const Home = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                ></iframe>
+                ></iframe>º
                 <iframe
                     className=" mt-3 border border-1  rounded-start  border border-warning-subtle"
                     width="560"
@@ -83,7 +83,7 @@ export const Home = () => {
                                         <Link to={`/charactersInfo/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavorits(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
+                                        <button onClick={() => actions.addFavoritsCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -137,7 +137,7 @@ export const Home = () => {
                                         <Link to={`/vehiclesInfo/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavorits(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
+                                        <button onClick={() => actions.addFavoritsVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -191,7 +191,7 @@ export const Home = () => {
                                         <Link to={`/planetsInfo/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavorits(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
+                                        <button onClick={() => actions.addFavoritsPlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
                                     </div>
                                 </div>
                             ))}

@@ -23,10 +23,10 @@ export const Navbar = () => {
 				<div className="dropdown-container">
 					<div className="dropdown">
 						<a className="btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Favorits ({store.favorits.length})
+							Favorits ({store.charactersfavorist.length})
 						</a>
 						<ul className="dropdown-menu bg-warning">
-							{store.favorits.map((item, index) => {
+							{store.charactersfavorist.map((item, index) => {
 								return (
 									<li key={index}>
 										<Link to={`/charactersInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
@@ -35,25 +35,23 @@ export const Navbar = () => {
 								)
 							})}
 						</ul>
-					</div>
 
-					<div className="dropdown">
-						<a className="btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Dropdown 2
-						</a>
+
 						<ul className="dropdown-menu bg-warning">
-							{/* Aquí puedes añadir los elementos de la lista del segundo dropdown */}
+							{store.vehiclesfavorist.map((item, index) => {
+								return (
+									<li key={index}>
+										<Link to={`/vehiclesInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
+										<button className="delete" onClick={() => actions.setDeletF(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+									</li>
+								)
+							})}
 						</ul>
 					</div>
 
-					<div className="dropdown">
-						<a className="btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Dropdown 3
-						</a>
-						<ul className="dropdown-menu bg-warning">
-							{/* Aquí puedes añadir los elementos de la lista del tercer dropdown */}
-						</ul>
-					</div>
+			
+
+					
 				</div>
 			</div>
 		</nav>

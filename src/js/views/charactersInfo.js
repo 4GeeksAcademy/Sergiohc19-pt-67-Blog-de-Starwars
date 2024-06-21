@@ -8,10 +8,7 @@ export const CharactersInfo = props => {
     const params = useParams();
 
     useEffect(() => {
-
         actions.getCharactersInfo(params.uid)
-       
-
     }, [])
 
     return (
@@ -31,8 +28,8 @@ export const CharactersInfo = props => {
                             <div className="d-flex">
                                 <ul>
 
-                                    <li className="p-3" ><h6>"Birth_year":
-                                        {store?.infocharacters?.birth_year}</h6>
+                                    <li className="p-3" ><h6>"Birth_year"
+                                       <span> : {store?.infocharacters?.birth_year}</span></h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Eye_color":
