@@ -1,4 +1,10 @@
 /* General Styles */
+
+* {
+
+    font-weight: bold;
+}
+
 body::-webkit-scrollbar {
     width: 8px;
 }
@@ -79,19 +85,34 @@ body {
     padding: 10px;
     display: flex;
     gap: 10px;
+    margin-right: 20px;
     /* Add spacing between dropdowns */
 }
 
 .dropdown-menu {
-    width: 100px;
+    width: 200px;
     text-align: center;
     align-items: center;
 }
 
+.container-name {
+    display: flex;
+    width: 120px;
+    padding: 10px;
+}
+
+
+
 .delete {
     border: none;
-    margin-inline: 0px;
+    margin-left: 35px;
     padding: 0;
     width: 0;
     height: 0;
+    color: black;
+}
+
+
+.delete:hover {
+    color: red;
 }

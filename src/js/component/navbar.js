@@ -30,9 +30,9 @@ export const Navbar = () => {
 						<ul className="dropdown-menu bg-warning">
 							{store.charactersfavorist.map((item, index) => {
 								return (
-									<li key={index}>
-										<Link to={`/charactersInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
-										<button className="delete" onClick={() => actions.deleteCharacters(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+									<li className="container-name" key={index}>
+										<Link to={`/charactersInfo/${item.id}`} className="dropdown-item bg-warning fw-bold ">{item.name}</Link>
+										<button className="delete" onClick={() => actions.deleteCharacters(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
 							})}
@@ -44,29 +44,12 @@ export const Navbar = () => {
 								return (
 									<li key={index}>
 										<Link to={`/charactersInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
-										<button className="delete" onClick={() => actions.deleteCharacters(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+										<button className="delete" onClick={() => actions.deleteCharacters(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
 							})}
 						</ul>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 					<div className="dropdown">
@@ -76,9 +59,9 @@ export const Navbar = () => {
 						<ul className="dropdown-menu bg-warning">
 							{store.vehiclesfavorist.map((item, index) => {
 								return (
-									<li key={index}>
+									<li className="container-name" key={index}>
 										<Link to={`/vehiclesInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
-										<button className="delete" onClick={() => actions.deleteVehicles(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+										<button className="delete" onClick={() => actions.deleteVehicles(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
 							})}
@@ -90,26 +73,12 @@ export const Navbar = () => {
 								return (
 									<li key={index}>
 										<Link to={`/vehiclesInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
-										<button className="delete" onClick={() => actions.deleteVehicles(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+										<button className="delete" onClick={() => actions.deleteVehicles(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
 							})}
 						</ul>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 					<div className="dropdown">
@@ -119,9 +88,9 @@ export const Navbar = () => {
 						<ul className="dropdown-menu bg-warning">
 							{store.planetsfavorist.map((item, index) => {
 								return (
-									<li key={index}>
+									<li className="container-name" key={index}>
 										<Link to={`/planetsInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
-										<button className="delete" onClick={() => actions.deletePlanets(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+										<button className="delete" onClick={() => actions.deletePlanets(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
 							})}
@@ -133,41 +102,12 @@ export const Navbar = () => {
 								return (
 									<li key={index}>
 										<Link to={`/planetsInfo/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
-										<button className="delete" onClick={() => actions.deletePlanets(item)}><i className="fa-solid fa-trash-can fa-2xl" style={{ color: "#000000" }}></i></button>
+										<button className="delete" onClick={() => actions.deletePlanets(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
 							})}
 						</ul>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 				</div>
 
