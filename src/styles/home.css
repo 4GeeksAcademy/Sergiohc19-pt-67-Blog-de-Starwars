@@ -77,4 +77,20 @@ nav {
     padding: 0;
     width: 0;
     height: 0;
+    color: grey;
+    border-style: none;
+    transition: transform 30s ease-in-out;
+}
+
+.like:active {
+    color: red;
+    transform: scale(1.5);
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 0;
+    border-style: none;
+}
+
+.like:visited {
+    color: red;
 }

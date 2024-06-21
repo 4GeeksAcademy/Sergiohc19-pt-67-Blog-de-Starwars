@@ -1,6 +1,6 @@
 // src/pages/Home.js
 import "../../styles/home.css";
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { CharactersInfo } from "../views/charactersInfo.js";
@@ -9,6 +9,8 @@ import { PlanetsInfo } from "./planetsInfo.js"
 
 export const Home = () => {
     const { store, actions } = useContext(Context);
+    const [like, setLike] = useState(false)
+
 
 
     useEffect(() => {
@@ -16,6 +18,7 @@ export const Home = () => {
         actions.getVehicles();
         actions.getPlanets();
     }, []);
+
 
     return (
         <div className="text-center">
@@ -83,7 +86,7 @@ export const Home = () => {
                                         <Link to={`/charactersInfo/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavoritsCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
+                                        <button onClick={() => actions.addFavoritsCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl"></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -137,7 +140,7 @@ export const Home = () => {
                                         <Link to={`/vehiclesInfo/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavoritsVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
+                                        <button onClick={() => actions.addFavoritsVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -191,7 +194,7 @@ export const Home = () => {
                                         <Link to={`/planetsInfo/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavoritsPlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" style={{ color: "#FFD43B" }}></i></button>
+                                        <button onClick={() => actions.addFavoritsPlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
                                     </div>
                                 </div>
                             ))}
