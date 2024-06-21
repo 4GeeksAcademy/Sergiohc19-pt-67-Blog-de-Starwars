@@ -92,11 +92,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 
-			setDeletF: (name) => {
+			deleteCharacters: (name) => {
 				let store = getStore()
 				const result = store.charactersfavorist.filter((favorito) => (favorito != name));
 				setStore({ charactersfavorist: result })
-			}
+			},
+
+
+
+			deleteVehicles: (name) => {
+				let store = getStore()
+				const result = store.vehiclesfavorist.filter((favorito) => (favorito != name));
+				setStore({ vehiclesfavorist: result })
+			},
+
+
+
+
+
+			deletePlanets: (name) => {
+				let store = getStore()
+				const result = store.planetsfavorist.filter((favorito) => (favorito != name));
+				setStore({ planetsfavorist: result })
+			},
+
+
+
+
+
+
+
+
+
 
 		}
 	};
